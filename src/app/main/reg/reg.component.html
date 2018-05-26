@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card card-container">
+        <div class="alert alert-success" *ngIf="sucess">
+            <div class="alert-items">
+                <div class="alert-item static">
+                    <div class="alert-icon-wrapper">
+                        <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+                    </div>
+                    <span class="alert-text">
+                               {{sucess}}
+                            </span>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" />
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> -->
+        <p data-letters="EC" id="profile-img" class="profile-img-card"></p>
+
+        <form class="form-signin" (ngSubmit)="onSubmit(formgroup)" [formGroup]="formgroup">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="email" formControlName="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <input type="text" formControlName="companyname" id="inputEmail" class="form-control" placeholder="Company Name" required>
+            <input type="password" formControlName="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+            <button [clrLoading]="validateLoading" class="btn btn-lg btn-primary btn-block btn-signin" [disabled]="formgroup.invalid" type="submit">Sign Up</button>
+        </form>
+        <!-- /form -->
+
+        <a routerLink="/login" class="forgot-password">
+               Sign In
+            </a>
+    </div>
+    <div class="alert alert-danger" *ngIf="err">
+        <div class="alert-items">
+            <div class="alert-item static">
+                <div class="alert-icon-wrapper">
+                    <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                </div>
+                <span class="alert-text">
+                                   {{err}}
+                                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /container -->

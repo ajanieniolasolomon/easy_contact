@@ -15,6 +15,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
-  }
+    ],
+    "paths": {
+      "xyz": [
+        "dist/xyz"
+      ]
+    }
+  },
+  "include": [
+    "node_modules/angular-bootstrap-md/**/*.ts",
+    "src/**/*.ts"
+  ]
 }
