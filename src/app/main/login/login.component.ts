@@ -30,7 +30,9 @@ this.password =  this.formgroup.controls['password'];
     this.validateLoading = true;
     // console.log(formgroup );
   this.service.login(formgroup).then(res => {
- console.log(res);
+ // console.log(res.user.uid);
+ localStorage.setItem('contact_id', res.user.uid);
+
  this.router.navigate(['dash']);
   })
   .catch(err => {

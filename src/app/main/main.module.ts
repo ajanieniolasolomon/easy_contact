@@ -20,13 +20,14 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { MainService } from './main.service';
+import { MainPipe } from '../main.pipe';
 const config = {
-  apiKey: 'AIzaSyDM0qYzbN3NicI6RUlmyUzpXOkFD6XLLLU',
-  authDomain: 'ajax-d5074.firebaseapp.com',
-  databaseURL: 'https://ajax-d5074.firebaseio.com',
-  projectId: 'ajax-d5074',
-  storageBucket: 'ajax-d5074.appspot.com',
-  messagingSenderId: '769176866623'
+  apiKey: 'AIzaSyBPHmbQYvjrqeX24SncmxAEWEXPzOvNXZc',
+    authDomain: 'icontact-33034.firebaseapp.com',
+    databaseURL: 'https://icontact-33034.firebaseio.com',
+    projectId: 'icontact-33034',
+    storageBucket: 'icontact-33034.appspot.com',
+    messagingSenderId: '561594539296'
 };
 
 @NgModule({
@@ -42,8 +43,8 @@ const config = {
   ],
   declarations: [HomeComponent, DashComponent, LoginComponent,
      PrimaryComponent, PrimarysComponent,
-      SettingComponent, HistoryComponent, BinComponent, 
-      RegComponent, FsComponent
+      SettingComponent, HistoryComponent, BinComponent,
+      RegComponent, FsComponent, MainPipe
   ],
   providers: [ AngularFirestore, MainService]
 })

@@ -10,7 +10,7 @@
             <input type="email" formControlName="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
             <input type="password" formControlName="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-            <button [clrLoading]="validateLoading" class="btn btn-lg btn-primary btn-block btn-signin" [disabled]="formgroup.invalid" type="submit">Sign in</button>
+            <button [clrLoading]="validateLoading" type="button" class="btn btn-lg btn-primary btn-block btn-signin" [disabled]="formgroup.invalid" type="submit">Sign in</button>
         </form>
         <!-- /form -->
         <a routerLink="/forget-password" class="forgot-password  m-5">

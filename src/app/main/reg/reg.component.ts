@@ -38,7 +38,7 @@ this.companyname =  this.formgroup.controls['companyname'];
       this.sucess = 'You have successfully register';
       setTimeout(() => {
        this.sucess = null;
-      }, 1000);
+      }, 2000);
        })
     .catch(err => {
       console.log(err);

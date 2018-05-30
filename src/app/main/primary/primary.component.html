@@ -2,14 +2,15 @@
                 Primary
                 <span class="badge">12</span>
             </a>
-<div class="row">
+<div class="row" *ngIf="posts">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <div class="card-block">
+        <div class="card-block" *ngFor="let post of posts | async">
             <div class="card-media-block">
 
-                <div data-letters="MN">Eniolsolomon@gmail.com
+                <div data-letters="EC">{{post.data.email}}
 
-                    <span class="ml-3">12/8/2017</span>
+                    <span class="ml-3 badge">{{post.data.date.seconds * 1000 |  date }}</span>
+
                 </div>
 
             </div>
@@ -20,3 +21,18 @@
 
     </div>
 </div>
+<div *ngIf="!posts">
+    loading
+</div>
+<!--<ul *ngFor="let post of posts | async">
+    <li>
+        {{post.id}}
+    </li>
+    <li>
+        {{post.data.email}}
+    </li>
+    <li>
+        {{post.data.date}}
+    </li>
+
+</ul>-->
