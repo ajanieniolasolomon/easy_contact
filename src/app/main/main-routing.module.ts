@@ -13,6 +13,7 @@ import { FsComponent } from './fs/fs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   {  path: 'dash', component: DashComponent, children: [
     { path: '', component: PrimaryComponent },
     { path: 'more/:id', component: PrimarysComponent},
@@ -21,7 +22,6 @@ const routes: Routes = [
     { path: 'setting', component: SettingComponent },
   ] },
 
-  { path: 'login', component: LoginComponent },
   { path: 'reg', component: RegComponent },
   { path: 'forget-password', component: FsComponent },
 ];

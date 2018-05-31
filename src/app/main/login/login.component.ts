@@ -33,7 +33,7 @@ this.password =  this.formgroup.controls['password'];
  // console.log(res.user.uid);
  localStorage.setItem('contact_id', res.user.uid);
 
- this.router.navigate(['dash']);
+ this.router.navigateByUrl('dash');
   })
   .catch(err => {
  console.log(err);

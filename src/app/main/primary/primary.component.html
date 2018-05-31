@@ -2,7 +2,7 @@
                 Primary
                 <span class="badge">12</span>
             </a>
-<div class="row" *ngIf="posts">
+<div class="row">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
         <div class="card-block" *ngFor="let post of posts | async">
             <div class="card-media-block">
@@ -21,9 +21,7 @@
 
     </div>
 </div>
-<div *ngIf="!posts">
-    loading
-</div>
+
 <!--<ul *ngFor="let post of posts | async">
     <li>
         {{post.id}}
