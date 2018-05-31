@@ -41,7 +41,8 @@ this.Saveinfor(dat, data);
 
    }
  Message() {
-return this.afs.collection('message', ref => ref.where('id', '==', localStorage.getItem('contact_id')) ).snapshotChanges()
+return this.afs.collection('message', ref => ref.where('id', '==', localStorage.getItem('contact_id')).orderBy('date','desc') )
+.snapshotChanges()
 .map(actions => {
   return actions.map(a => {
     const data = a.payload.doc.data();
