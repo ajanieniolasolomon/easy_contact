@@ -1,19 +1,32 @@
-<form>
+<form id="contact" (ngSubmit)="onSubmit(formgroup)" [formGroup]="formgroup">
     <section class="form-block">
         <a href="..." class="label label-light-blue clickable">
-            Problem
-            <span class="badge">12</span>
+        port
+            <span class="badge">{{super}}</span>
         </a>
-        <p class="p3">Table, grid, and form text</p>
-        <a href="..." class="label label-light-green clickable">
-          Solution
-          <span class="badge">id</span>
-      </a>
-        <input type="date" clrDate>
+        <p class="p3">{{message}}</p>
 
 
-        <textarea id="aForm_3" rows="5"></textarea>
 
-        <button type="submit" class="btn btn-primary">Reply</button>
+
+        <textarea id="aForm_3" rows="5" formControlName="reply"></textarea>
+
+        <button type="submit" [disabled]="formgroup.invalid" class="btn btn-primary">Reply</button>
     </section>
 </form>
+<h4>Reply</h4>
+<div *ngIf="message2 ;else other_content">
+
+    <ul class="list" *ngFor="let post of message2 ">
+
+
+        <li>{{post.reply }} <span class="ml-3 badge">{{post.date.seconds * 1000 |  date  }}</span></li>
+
+    </ul>
+</div>
+<br />
+<ng-template #other_content><span class="spinner spinner-sm">
+        Loading...
+    </span><span>
+           Searching for reply...
+        </span></ng-template>

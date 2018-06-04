@@ -10,6 +10,7 @@ import { BinComponent } from './bin/bin.component';
 import { SettingComponent } from './setting/setting.component';
 import { RegComponent } from './reg/reg.component';
 import { FsComponent } from './fs/fs.component';
+import { MainResolver } from './main.resolver';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

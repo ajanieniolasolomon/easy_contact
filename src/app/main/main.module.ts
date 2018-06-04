@@ -21,6 +21,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { MainService } from './main.service';
 import { MainPipe } from '../main.pipe';
+import { MainResolver } from './main.resolver';
+
 const config = {
   apiKey: 'AIzaSyBPHmbQYvjrqeX24SncmxAEWEXPzOvNXZc',
     authDomain: 'icontact-33034.firebaseapp.com',
@@ -46,6 +48,6 @@ const config = {
       SettingComponent, HistoryComponent, BinComponent,
       RegComponent, FsComponent, MainPipe
   ],
-  providers: [ AngularFirestore, MainService]
+  providers: [ AngularFirestore, MainService, MainResolver]
 })
 export class MainModule { }

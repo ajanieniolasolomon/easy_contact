@@ -3,7 +3,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {
   AngularFirestore,
-  AngularFirestoreCollection
+  AngularFirestoreCollection,
+  AngularFirestoreDocument
 } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -16,6 +17,7 @@ export class MainService {
   User$: Observable<User[]>;
   MessageCollectionRef: AngularFirestoreCollection<Message>;
  Message$: Observable<Message[]>;
+
   constructor(private firebaseAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.user = firebaseAuth.authState;
     this.UserCollectionRef = this.afs.collection<User>('user');
@@ -41,17 +43,26 @@ this.Saveinfor(dat, data);
 
    }
  Message() {
-return this.afs.collection('message', ref => ref.where('id', '==', localStorage.getItem('contact_id')).orderBy('date','desc') )
+return this.afs.collection('message', ref => ref.where('id', '==', localStorage.getItem('contact_id')).orderBy('date', 'desc') )
 .snapshotChanges()
 .map(actions => {
   return actions.map(a => {
     const data = a.payload.doc.data();
     const id = a.payload.doc.id;
-    console.log(data);
-    console.log(id);
+
     return { id, data };
   });
 });
+}
+getMessageByid(id) {
+return this.afs.doc('message/' + id).valueChanges();
+}
+replyRespond(data, email, id) {
+return this.afs.collection('reply').add({email:  email, ticket: id, reply: data,
+  date: firebase.firestore.FieldValue.serverTimestamp()});
+}
+viewRespond(id) {
+return this.afs.collection('reply', ref => ref.where('ticket', '==', id).orderBy('date', 'desc')).valueChanges();
 }
 
 }

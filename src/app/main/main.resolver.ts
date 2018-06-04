@@ -7,6 +7,9 @@ export class MainResolver implements Resolve<any> {
   constructor(private service: MainService) {}
 
   resolve(route: ActivatedRouteSnapshot) {
-    // return this.service.getTopPosts();
+const id = route.paramMap.get('id');
+console.log(id);
+// console.log(this.service.getMessageByid(+id).valueChanges())
+   return this.service.getMessageByid(id);
   }
-};
+}
