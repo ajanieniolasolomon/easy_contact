@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MainRoutingModule } from './main-routing.module';
 import { HomeComponent } from './home/home.component';
-import { MaterialModule } from './material.module';
+
 import { DashComponent } from './dash/dash.component';
 import { ClarityModule } from '@clr/angular';
 import { LoginComponent } from './login/login.component';
@@ -36,8 +36,7 @@ const config = {
   imports: [
     CommonModule,
     MainRoutingModule,
-    MDBBootstrapModule.forRoot(),
-    MaterialModule, ClarityModule,
+   ClarityModule,
     ReactiveFormsModule, FormsModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
