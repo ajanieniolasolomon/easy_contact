@@ -1,3 +1,22 @@
 <router-outlet>
 
 </router-outlet>
+<ng-container *ngIf="loadingRouteConfig">
+    <div id="pre-bootstrap">
+        <div class="messaging">
+
+
+
+            <span class="spinner spinner-sm">
+                   
+                </span>
+            <span>
+                        <clr-icon  shape="map-marker"></clr-icon>     Easy-contact loading
+                </span>
+
+
+
+
+        </div>
+    </div>
+</ng-container>

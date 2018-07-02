@@ -1,7 +1,6 @@
     .content {
-        position: relative;
         top: 10%;
-        padding: 3% 3% 3% 10%;
+        padding: 3% 3% 3% 0%;
     }
     
     .content .btn {
@@ -30,7 +29,8 @@
     
     .img {
         position: relative;
-        left: 30%;
+        left: 0%;
+        padding-left: 0;
     }
     
     h2 {
@@ -81,4 +81,9 @@
     .btns {
         background-color: #111;
         border-color: aliceblue;
+    }
+    
+    h1 {
+        font: 1em;
+        color: #00B7D6;
     }
