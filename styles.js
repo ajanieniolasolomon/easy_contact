@@ -89,7 +89,7 @@ module.exports = "/*!\n * Copyright (c) 2016-2017 VMware, Inc. All Rights Reserv
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "html,\nbody {\n    margin: 0px;\n    padding: 0px;\n    overflow-x: hidden;\n}"
 
 /***/ }),
 

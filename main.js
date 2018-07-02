@@ -71,7 +71,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#pre-bootstrap {\n    background-color: #262626;\n    bottom: 0px;\n    left: 0px;\n    position: fixed;\n    right: 0px;\n    top: 0px;\n    z-index: 999999;\n}\n\n#pre-bootstrap div.messaging {\n    color: #FFFFFF;\n    font-family: monospace;\n    left: 0px;\n    margin-top: -37px;\n    position: absolute;\n    right: 0px;\n    text-align: center;\n    top: 50%;\n}\n\n#pre-bootstrap h1 {\n    font-size: 26px;\n    line-height: 35px;\n    margin: 0px 0px 20px 0px;\n}\n\n#pre-bootstrap p {\n    font-size: 18px;\n    line-height: 14px;\n    margin: 0px 0px 0px 0px;\n}\n\npre {\n    border: none;\n}\n\nspan {\n    color: #FFFFFF;\n}"
 
 /***/ }),
 
@@ -82,7 +82,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet>\n\n</router-outlet>"
+module.exports = "<router-outlet>\n\n</router-outlet>\n<ng-container *ngIf=\"loadingRouteConfig\">\n    <div id=\"pre-bootstrap\">\n        <div class=\"messaging\">\n\n\n\n            <span class=\"spinner spinner-sm\">\n                   \n                </span>\n            <span>\n                        <clr-icon  shape=\"map-marker\"></clr-icon>     Easy-contact loading\n                </span>\n\n\n\n\n        </div>\n    </div>\n</ng-container>"
 
 /***/ }),
 
@@ -97,23 +97,41 @@ module.exports = "<router-outlet>\n\n</router-outlet>"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(router) {
+        this.router = router;
         this.title = 'app';
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.router.events.subscribe(function (event) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadStart"]) {
+                _this.loadingRouteConfig = true;
+            }
+            else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadEnd"]) {
+                _this.loadingRouteConfig = false;
+            }
+        });
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -496,7 +514,7 @@ var HistoryComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "    .content {\n        position: relative;\n        top: 10%;\n        padding: 3% 3% 3% 10%;\n    }\n    \n    .content .btn {\n        color: #111;\n    }\n    \n    /*.back{\n\tbackground: url('../img/1.jpeg');\n\tbackground-position: top center;\n\tbackground-size: cover;\n\tbackground-repeat: no-repeat;\n}*/\n    \n    .back .content {\n        padding: 0\n    }\n    \n    .back .content img {\n        width: 100%\n    }\n    \n    p {\n        padding-top: 0px;\n        margin-top: 0px;\n        text-align: center;\n    }\n    \n    .img {\n        position: relative;\n        left: 0%;\n        padding-left: 0;\n    }\n    \n    h2 {\n        text-align: center;\n        margin-top: 2px;\n    }\n    \n    .us {\n        position: relative;\n        left: 30%;\n        color: #00B7D6;\n    }\n    \n    .header-6 {\n        background-color: #00B7D6 !important;\n    }\n    \n    .btn-color {\n        border: 1px solid #00B7D6;\n    }\n    \n    pre {\n        background: #111;\n        color: wheat;\n    }\n    \n    .des {\n        color: #00B7D6;\n    }\n    \n    h3 {\n        font-weight: 800;\n    }\n    \n    .fol {\n        background-color: azure;\n    }\n    \n    .center-div {\n        margin: 0 auto;\n        width: 300px;\n    }\n    \n    .center {\n        text-align: center;\n    }\n    \n    .btns {\n        background-color: #111;\n        border-color: aliceblue;\n    }"
+module.exports = "    .content {\n        top: 10%;\n        padding: 3% 3% 3% 0%;\n    }\n    \n    .content .btn {\n        color: #111;\n    }\n    \n    /*.back{\n\tbackground: url('../img/1.jpeg');\n\tbackground-position: top center;\n\tbackground-size: cover;\n\tbackground-repeat: no-repeat;\n}*/\n    \n    .back .content {\n        padding: 0\n    }\n    \n    .back .content img {\n        width: 100%\n    }\n    \n    p {\n        padding-top: 0px;\n        margin-top: 0px;\n        text-align: center;\n    }\n    \n    .img {\n        position: relative;\n        left: 0%;\n        padding-left: 0;\n    }\n    \n    h2 {\n        text-align: center;\n        margin-top: 2px;\n    }\n    \n    .us {\n        position: relative;\n        left: 30%;\n        color: #00B7D6;\n    }\n    \n    .header-6 {\n        background-color: #00B7D6 !important;\n    }\n    \n    .btn-color {\n        border: 1px solid #00B7D6;\n    }\n    \n    pre {\n        background: #111;\n        color: wheat;\n    }\n    \n    .des {\n        color: #00B7D6;\n    }\n    \n    h3 {\n        font-weight: 800;\n    }\n    \n    .fol {\n        background-color: azure;\n    }\n    \n    .center-div {\n        margin: 0 auto;\n        width: 300px;\n    }\n    \n    .center {\n        text-align: center;\n    }\n    \n    .btns {\n        background-color: #111;\n        border-color: aliceblue;\n    }\n    \n    h1 {\n        font: 1em;\n        color: #00B7D6;\n    }"
 
 /***/ }),
 
@@ -507,7 +525,7 @@ module.exports = "    .content {\n        position: relative;\n        top: 10%;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"alert alert-app-level alert-warning\">\n    <div class=\"alert-items\">\n        <div class=\"alert-item static\">\n            <div class=\"alert-icon-wrapper\">\n                <clr-icon class=\"alert-icon\" shape=\"warning-standard\"></clr-icon>\n            </div>\n            <div class=\"alert-text\">\n                Still in demo version release date 2018-july.\n            </div>\n            <div class=\"alert-actions\">\n                <button class=\"btn alert-action\">find us</button>\n            </div>\n        </div>\n    </div>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n            <clr-icon aria-hidden=\"true\" shape=\"close\"></clr-icon>\n        </button>\n</div>\n\n\n<header class=\"header-6\">\n    <div class=\"branding\">\n        <a class=\"nav-link\">\n            <clr-icon class=\"test\" shape=\"map-marker\"></clr-icon>\n            <span class=\"title\">Easy-contact</span>\n        </a>\n    </div>\n\n\n</header>\n<div class=\"row\">\n    <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n        <div class=\"content\">\n            <h1>A powerful way to manage your customers</h1>\n            <div class=\"col-sm-12 col-md-12 col-xs-12\">\n                <button routerLink=\"reg\" class=\"btn btn-outline  btn-color\">Get Started</button>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n        <div class=\"content\">\n            <div class=\"card-img\">\n                <img src=\"https://raw.githubusercontent.com/ajanieniolasolomon/easy_contact/master/src/assets/contact1.png\" alt=\"contact.svg\">\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"row mt-1\">\n    <div class=\"col-lg-4 col-md-4 col-sm-3 col-xs-12 \">\n        <div class=\"content\">\n            <clr-icon class=\"us\" shape=\"cog\" size=\"72\"></clr-icon>\n            <h2>Easy to intergrate</h2>\n            <p>\n                With just two line of code Easy-contact is up and running\n            </p>\n        </div>\n    </div>\n    <div class=\"col-lg-4 col-md-4 col-sm-3 col-xs-12\">\n        <div class=\"content\">\n\n            <clr-icon class=\"us\" shape=\"envelope\" size=\"72\"></clr-icon>\n            <h2>Realtime message</h2>\n            <p>\n                Provide realtime notification to clientn at any time and any place\n            </p>\n        </div>\n    </div>\n    <div class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\">\n        <div class=\"content\">\n            <clr-icon class=\"us\" shape=\"bell\" size=\"72\"></clr-icon>\n            <h2>Web Notification</h2>\n            <p>\n                Send real-time web notification to client when ever message is sent\n            </p>\n        </div>\n    </div>\n</div>\n\n<div class=\"row fol mt-3\">\n\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 m-1\">\n        <h2>Getting Started\n            <clr-icon class=\"des\" size=\"36\" shape=\"book\"></clr-icon>\n        </h2>\n        <div class=\"center-div pl-3\">\n            <h3 class=\"m-2\">\n                Step One</h3>\n\n            <div class=\" btn-group btn-primary\">\n                <button class=\"btn btns\" routerLink=\"reg\">Register</button>\n                <button class=\"btn btns\" routerLink=\"login\">Sign-Up</button>\n\n            </div>\n        </div>\n    </div>\n\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 m-1\">\n        <h3 class=\" center m-1\">\n            Step Two</h3>\n\n        <pre>\n       \n    <code clr-code-highlight=\"language-css\">\n       \n           &#60;app-contact&#62;loading&#60;/app-contact&#62;\n           &#60;script type&#61;\"text/javascript\" src&#61;\"url\"&#62;&#60;/script&#62;\n        \n        \n    </code>\n</pre>\n\n    </div>\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 m-1\">\n        <h4>@Swidatech</h4>\n    </div>\n</div>"
+module.exports = "<div class=\"alert alert-app-level alert-warning\">\n    <div class=\"alert-items\">\n        <div class=\"alert-item static\">\n            <div class=\"alert-icon-wrapper\">\n                <clr-icon class=\"alert-icon\" shape=\"warning-standard\"></clr-icon>\n            </div>\n            <div class=\"alert-text\">\n                Demo version .Support this project\n            </div>\n            <div class=\"alert-actions\">\n                <button class=\"btn alert-action\">Donate</button>\n            </div>\n        </div>\n    </div>\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n            <clr-icon aria-hidden=\"true\" shape=\"close\"></clr-icon>\n        </button>\n</div>\n\n\n<header class=\"header-6\">\n    <div class=\"branding\">\n        <a class=\"nav-link\">\n            <clr-icon class=\"test\" shape=\"map-marker\"></clr-icon>\n            <span class=\"title\">Easy-contact</span>\n        </a>\n    </div>\n\n\n</header>\n<div class=\"row\">\n    <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n        <div class=\"content ml-1\">\n            <h1>A powerful way to manage your customers with just two lines of code</h1>\n            <div class=\"col-sm-12 col-md-12 col-xs-12\">\n                <button routerLink=\"reg\" class=\"btn btn-outline  btn-color\">Get Started</button>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n        <div class=\"content\">\n            <div class=\"card-img\">\n                <!-- <img src=\"https://raw.githubusercontent.com/ajanieniolasolomon/easy_contact/master/src/assets/contact1.png\" alt=\"contact.svg\">-->\n                <img src=\"../../../assets/contact1.png\">\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"row m-1\">\n    <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12 \">\n        <div class=\"content\">\n            <clr-icon class=\"us\" shape=\"cog\" size=\"72\"></clr-icon>\n            <h2>Easy to intergrate</h2>\n            <p>\n                With just two line of code Easy-contact is up and running\n            </p>\n        </div>\n    </div>\n    <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">\n        <div class=\"content\">\n\n            <clr-icon class=\"us\" shape=\"envelope\" size=\"72\"></clr-icon>\n            <h2>Realtime message</h2>\n            <p>\n                Provide realtime notification to clientn at any time and any place\n            </p>\n        </div>\n    </div>\n    <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">\n        <div class=\"content\">\n            <clr-icon class=\"us m-0\" shape=\"bell\" size=\"72\"></clr-icon>\n            <h2>Web Notification</h2>\n            <p>\n                Send real-time web notification to client when ever message is sent\n            </p>\n        </div>\n    </div>\n</div>\n\n<div class=\"row fol mt-3\">\n\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 m-0\">\n        <h2>Getting Started\n            <clr-icon class=\"des center\" size=\"36\" shape=\"book\"></clr-icon>\n        </h2>\n        <div class=\"center-div pl-3\">\n            <h3 class=\"m-2\">\n                Step One</h3>\n\n            <div class=\" btn-group btn-primary\">\n                <button class=\"btn btns\" routerLink=\"reg\">Register</button>\n                <button class=\"btn btns\" routerLink=\"login\">Sign-Up</button>\n\n            </div>\n        </div>\n    </div>\n\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1 mr-1\">\n        <h3 class=\" center m-0\">\n            Step Two</h3>\n\n        <pre>\n       \n    <code>\n       #with just two line of code \n       \n           &#60;app-contact&#62;loading&#60;/app-contact&#62;\n           &#60;script type&#61;\"text/javascript\" src&#61;\"url\"&#62;&#60;/script&#62;\n        \n        \n    </code>\n</pre>\n\n    </div>\n    <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 m-1\">\n        <h4>@Swidatech</h4>\n    </div>\n</div>"
 
 /***/ }),
 
