@@ -152,13 +152,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/index.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm5/service-worker.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/esm5/clr-angular.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm5/service-worker.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/esm5/clr-angular.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -173,26 +172,24 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_2__["MDBBootstrapModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_service_worker__WEBPACK_IMPORTED_MODULE_5__["ServiceWorkerModule"].register('/ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].production }),
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
-                _clr_angular__WEBPACK_IMPORTED_MODULE_8__["ClarityModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
+                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register('/ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].production }),
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+                _clr_angular__WEBPACK_IMPORTED_MODULE_7__["ClarityModule"]
             ],
             schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["NO_ERRORS_SCHEMA"]],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -323,7 +320,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<clr-main-container>\n\n    <div class=\"alert alert-app-level alert-warning\">\n        <div class=\"alert-items\">\n            <div class=\"alert-item static\">\n                <div class=\"alert-icon-wrapper\">\n                    <clr-icon class=\"alert-icon\" shape=\"download\"></clr-icon>\n                </div>\n                <div class=\"alert-text\">\n                    Version 1.2 coming soon.\n                </div>\n\n            </div>\n        </div>\n    </div>\n    <clr-header class=\"header header-4\">\n        <div class=\"branding\">\n            <a routerLink=\"/\" class=\"nav-link\">\n\n\n                <span class=\"title pl-1\">Easy-contact</span>\n            </a>\n        </div>\n\n\n        <div class=\"header-actions\">\n\n\n            <clr-dropdown>\n                <button class=\"nav-icon\" clrDropdownTrigger>\n                    \n            <clr-icon shape=\"user\"></clr-icon>\n            <clr-icon shape=\"caret down\"></clr-icon>\n        </button>\n                <clr-dropdown-menu *clrIfOpen clrPosition=\"bottom-right\">\n                    <a clrDropdownItem routerLink=\"setting\">Settings</a>\n\n                    <a clrDropdownItem routerLink=\"login\">Logout</a>\n                </clr-dropdown-menu>\n            </clr-dropdown>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n\n        <nav class=\"sidenav\" [clr-nav-level]=\"1\">\n            <section class=\"sidenav-content\">\n\n\n                <section class=\"nav-group\">\n\n\n\n\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\" routerLink='../dash'>\n                        <clr-icon shape=\"home\"></clr-icon>\n                        Primary </button>\n                    </clr-tree-node>\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\" routerLink='history'>\n                                           <clr-icon shape=\"e-check\"></clr-icon>\n                                      History\n                                    </button>\n\n\n                    </clr-tree-node>\n\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\" routerLink='bin'>\n                                     \n                                        <clr-icon shape=\"trash\"></clr-icon>\n                                     Bin\n                                            </button>\n\n                    </clr-tree-node>\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\">\n                                         \n                                            <clr-icon shape=\"bell\"></clr-icon>\n                                         Subscribition \n                                                </button>\n\n                    </clr-tree-node>\n\n                </section>\n\n            </section>\n        </nav>\n    </div>\n</clr-main-container>"
+module.exports = "<clr-main-container>\n\n    <div class=\"alert alert-app-level alert-warning\">\n        <div class=\"alert-items\">\n            <div class=\"alert-item static\">\n                <div class=\"alert-icon-wrapper\">\n                    <clr-icon class=\"alert-icon\" shape=\"download\"></clr-icon>\n                </div>\n                <div class=\"alert-text\">\n                    Version 1.2 coming soon.\n                </div>\n\n            </div>\n        </div>\n    </div>\n    <clr-header class=\"header header-4\">\n        <div class=\"branding\">\n            <a routerLink=\"/\" class=\"nav-link\">\n\n\n                <span class=\"title pl-1\">Easy-contact</span>\n            </a>\n        </div>\n\n\n        <div class=\"header-actions\">\n\n\n            <clr-dropdown>\n                <button class=\"nav-icon\" clrDropdownTrigger>\n                    \n            <clr-icon shape=\"user\"></clr-icon>\n            <clr-icon shape=\"caret down\"></clr-icon>\n        </button>\n                <clr-dropdown-menu *clrIfOpen clrPosition=\"bottom-right\">\n\n\n                    <a clrDropdownItem routerLink=\"login\">Logout</a>\n                </clr-dropdown-menu>\n            </clr-dropdown>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n        <clr-vertical-nav [clrVerticalNavCollapsible]=\"true\" [clr-nav-level]=\"1\" [(clrVerticalNavCollapsed)]=\"collapsed\">\n            <a clrVerticalNavLink routerLink='../dash' routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"envelope\"></clr-icon>\n                message\n            </a>\n            <a clrVerticalNavLink routerLink='history' routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"line-chart\" class=\"has-alert\"></clr-icon>\n                Chart\n            </a>\n            <a clrVerticalNavLink routerLink='setting' routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"book\"></clr-icon>\n                Documentation\n            </a>\n            <a clrVerticalNavLink routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"bell\"></clr-icon>\n                Notification\n            </a>\n\n\n        </clr-vertical-nav>\n\n\n        <!-- <nav class=\"sidenav\" [clr-nav-level]=\"1\">\n            <section class=\"sidenav-content\">\n\n\n                <section class=\"nav-group\">\n\n\n\n\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\" routerLink='../dash'>\n                        <clr-icon shape=\"home\"></clr-icon>\n                        Primary </button>\n                    </clr-tree-node>\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\" routerLink='history'>\n                                           <clr-icon shape=\"e-check\"></clr-icon>\n                                    Chart\n                                    </button>\n\n\n                    </clr-tree-node>\n\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\" routerLink='setting'>\n                                     \n                                        <clr-icon shape=\"trash\"></clr-icon>\n                                       Documentation\n                                            </button>\n\n                    </clr-tree-node>\n                    <clr-tree-node class=\"pb-1\">\n                        <button class=\"clr-treenode-link\">\n                                         \n                                            <clr-icon shape=\"bell\"></clr-icon>\n                                         Subscribition \n                                                </button>\n\n                    </clr-tree-node>\n\n                </section>\n\n            </section>\n        </nav>-->\n    </div>\n</clr-main-container>"
 
 /***/ }),
 
@@ -462,7 +459,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<clr-datagrid>\n    <clr-dg-column>Email</clr-dg-column>\n\n    <clr-dg-column [clrDgField]=\"'creation'\">Date Deleted</clr-dg-column>\n\n    <clr-dg-column [clrDgField]=\"'color'\">Favorite color</clr-dg-column>\n\n    <clr-dg-row>\n        <clr-dg-cell>user.id</clr-dg-cell>\n\n        <clr-dg-cell>user.creation | date</clr-dg-cell>\n\n        <clr-dg-cell>\n            <span class=\"color-square\">red</span>\n        </clr-dg-cell>\n    </clr-dg-row>\n\n    <clr-dg-footer>users.length users</clr-dg-footer>\n</clr-datagrid>"
+module.exports = "<div #chart>\n    <!-- Chart will appear here -->\n</div>"
 
 /***/ }),
 
@@ -491,7 +488,22 @@ var HistoryComponent = /** @class */ (function () {
     function HistoryComponent() {
     }
     HistoryComponent.prototype.ngOnInit = function () {
+        this.basicChart();
     };
+    HistoryComponent.prototype.basicChart = function () {
+        var element = this.el.nativeElement;
+        var data = [{
+                x: [1, 2, 3, 4, 5],
+                y: [1, 2, 4, 8, 16]
+            }];
+        var style = {
+            margin: { t: 0 }
+        };
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('chart'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], HistoryComponent.prototype, "el", void 0);
     HistoryComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-history',
@@ -974,7 +986,7 @@ var MainService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "[data-letters]:before {\n    content: attr(data-letters);\n    display: inline-block;\n    font-size: 1em;\n    width: 2.5em;\n    height: 2.5em;\n    line-height: 2.5em;\n    text-align: center;\n    border-radius: 50%;\n    background: plum;\n    vertical-align: middle;\n    margin-right: 1em;\n    color: white;\n}"
+module.exports = "[data-letters]:before {\n    content: attr(data-letters);\n    display: inline-block;\n    font-size: 1em;\n    width: 2.5em;\n    height: 2.5em;\n    line-height: 2.5em;\n    text-align: center;\n    border-radius: 50%;\n    background: plum;\n    vertical-align: middle;\n    margin-right: 1em;\n    color: white;\n}\n\nh3 {\n    text-align: center;\n    font-family: fantasy;\n}"
 
 /***/ }),
 
@@ -985,7 +997,7 @@ module.exports = "[data-letters]:before {\n    content: attr(data-letters);\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a href=\"...\" class=\"label label-light-blue clickable\">\n               Messages\n                \n            </a>\n<div class=\"row\">\n    <div class=\"col-lg-6 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"card-block\" *ngFor=\"let post of posts | async\">\n            <div class=\"card-media-block\" routerLink=\"more/{{post.id}}\">\n\n                <div data-letters=\"EC\">{{post.data.email}}\n\n                    <span class=\"ml-3 badge\">{{post.data.date.seconds * 1000 |  date }}</span>\n\n                </div>\n\n            </div>\n\n        </div>\n\n\n\n    </div>\n</div>\n\n<!--<ul *ngFor=\"let post of posts | async\">\n    <li>\n        {{post.id}}\n    </li>\n    <li>\n        {{post.data.email}}\n    </li>\n    <li>\n        {{post.data.date}}\n    </li>\n\n</ul>-->"
+module.exports = "<h3>Message</h3>\n\n<table class=\"table table-compact\">\n    <thead>\n        <tr>\n            <th class=\"left\">Email</th>\n            <th>Date</th>\n            <th class=\"left\"> Status</th>\n        </tr>\n    </thead>\n    <tbody>\n\n        <tr *ngFor=\"let post of posts | async\" routerLink=\"more/{{post.id}}\">\n            <td class=\"left\">{{post.data.email}}</td>\n            <td>{{post.data.date.seconds * 1000 | date }}</td>\n\n            <td class=\"left\">unread</td>\n        </tr>\n\n    </tbody>\n</table>"
 
 /***/ }),
 
@@ -1250,7 +1262,7 @@ var RegComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "pre {\n    background: #111;\n    color: wheat;\n}"
 
 /***/ }),
 
@@ -1261,7 +1273,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Angular</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <h1>Angular</h1>\n            <p> npm installeasymessage --save</p>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>React/Vue.js/Next</button>\n        <clr-tab-content>\n            <p>React/Vue.js/Next</p>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Php</button>\n        <clr-tab-content>\n            <p>Php</p>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>"
+module.exports = "<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Angular</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <pre>\n       \n                <code>\n                   #coming soon\n                    \n                </code>\n            </pre>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Others</button>\n        <clr-tab-content>\n            <pre>\n       \n                <code>\n                   #with just two line of code \n                   \n                       &#60;app-contact&#62;loading&#60;/app-contact&#62;\n                       &#60;script type&#61;\"text/javascript\" src&#61;\"url\"&#62;&#60;/script&#62;\n                    \n                    \n                </code>\n            </pre>\n\n        </clr-tab-content>\n    </clr-tab>"
 
 /***/ }),
 
