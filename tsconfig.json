@@ -19,11 +19,14 @@
     "paths": {
       "xyz": [
         "dist/xyz"
-      ]
+      ],
+      "plotly.js": [
+        "node_modules/plotly.js/lib/core.js"
+    ]
     }
   },
   "include": [
-    "node_modules/angular-bootstrap-md/**/*.ts",
+  
     "src/**/*.ts"
   ]
 }

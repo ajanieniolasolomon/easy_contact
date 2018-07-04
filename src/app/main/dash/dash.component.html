@@ -33,7 +33,7 @@
             <clr-icon shape="caret down"></clr-icon>
         </button>
                 <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-                    <a clrDropdownItem routerLink="setting">Settings</a>
+
 
                     <a clrDropdownItem routerLink="login">Logout</a>
                 </clr-dropdown-menu>
@@ -44,8 +44,29 @@
         <div class="content-area">
             <router-outlet></router-outlet>
         </div>
+        <clr-vertical-nav [clrVerticalNavCollapsible]="true" [clr-nav-level]="1" [(clrVerticalNavCollapsed)]="collapsed">
+            <a clrVerticalNavLink routerLink='../dash' routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="envelope"></clr-icon>
+                message
+            </a>
+            <a clrVerticalNavLink routerLink='history' routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="line-chart" class="has-alert"></clr-icon>
+                Chart
+            </a>
+            <a clrVerticalNavLink routerLink='setting' routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="book"></clr-icon>
+                Documentation
+            </a>
+            <a clrVerticalNavLink routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="bell"></clr-icon>
+                Notification
+            </a>
 
-        <nav class="sidenav" [clr-nav-level]="1">
+
+        </clr-vertical-nav>
+
+
+        <!-- <nav class="sidenav" [clr-nav-level]="1">
             <section class="sidenav-content">
 
 
@@ -62,17 +83,17 @@
                     <clr-tree-node class="pb-1">
                         <button class="clr-treenode-link" routerLink='history'>
                                            <clr-icon shape="e-check"></clr-icon>
-                                      History
+                                    Chart
                                     </button>
 
 
                     </clr-tree-node>
 
                     <clr-tree-node class="pb-1">
-                        <button class="clr-treenode-link" routerLink='bin'>
+                        <button class="clr-treenode-link" routerLink='setting'>
                                      
                                         <clr-icon shape="trash"></clr-icon>
-                                     Bin
+                                       Documentation
                                             </button>
 
                     </clr-tree-node>
@@ -88,6 +109,6 @@
                 </section>
 
             </section>
-        </nav>
+        </nav>-->
     </div>
 </clr-main-container>

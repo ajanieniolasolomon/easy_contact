@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 import { MainRoutingModule } from './main-routing.module';
 import { HomeComponent } from './home/home.component';
 

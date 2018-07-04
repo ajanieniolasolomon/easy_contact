@@ -1,36 +1,21 @@
-<a href="..." class="label label-light-blue clickable">
-               Messages
-                
-            </a>
-<div class="row">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <div class="card-block" *ngFor="let post of posts | async">
-            <div class="card-media-block" routerLink="more/{{post.id}}">
+<h3>Message</h3>
 
-                <div data-letters="EC">{{post.data.email}}
+<table class="table table-compact">
+    <thead>
+        <tr>
+            <th class="left">Email</th>
+            <th>Date</th>
+            <th class="left"> Status</th>
+        </tr>
+    </thead>
+    <tbody>
 
-                    <span class="ml-3 badge">{{post.data.date.seconds * 1000 |  date }}</span>
+        <tr *ngFor="let post of posts | async" routerLink="more/{{post.id}}">
+            <td class="left">{{post.data.email}}</td>
+            <td>{{post.data.date.seconds * 1000 | date }}</td>
 
-                </div>
+            <td class="left">unread</td>
+        </tr>
 
-            </div>
-
-        </div>
-
-
-
-    </div>
-</div>
-
-<!--<ul *ngFor="let post of posts | async">
-    <li>
-        {{post.id}}
-    </li>
-    <li>
-        {{post.data.email}}
-    </li>
-    <li>
-        {{post.data.date}}
-    </li>
-
-</ul>-->
+    </tbody>
+</table>
