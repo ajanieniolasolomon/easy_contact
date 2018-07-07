@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "index": "https://ajanieniolasolomon.github.io/easy_contact/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://ajanieniolasolomon.github.io/easy_contact/favicon.ico",
+        "https://ajanieniolasolomon.github.io/easy_contact/firebase-messaging-sw.js",
+        "https://ajanieniolasolomon.github.io/easy_contact/index.html",
+        "https://ajanieniolasolomon.github.io/easy_contact/main.97733f822040add3aa2a.js",
+        "https://ajanieniolasolomon.github.io/easy_contact/polyfills.a055efd08edeb127a289.js",
+        "https://ajanieniolasolomon.github.io/easy_contact/runtime.6afe30102d8fe7337431.js",
+        "https://ajanieniolasolomon.github.io/easy_contact/scripts.475758c1e30b98be34a7.js",
+        "https://ajanieniolasolomon.github.io/easy_contact/styles.f856d80cf86778379eb0.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/contact1.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/code.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/envelope.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/gears.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-128x128.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-144x144.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-152x152.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-192x192.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-384x384.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-512x512.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-72x72.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-96x96.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/notification.png",
+        "https://ajanieniolasolomon.github.io/easy_contact/assets/svg.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://ajanieniolasolomon.github.io/easy_contact/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/contact1.png": "4b282e580c55cf05046e04586b62fe6e4701f9c4",
+    "https://ajanieniolasolomon.github.io/easy_contact/firebase-messaging-sw.js": "d3ed7b74d2ccd4d92fd85f1e9cbcab3111863f2f",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/code.png": "0392bee8334660abf62e2463dacdbb907e0c6c9e",
+    "https://ajanieniolasolomon.github.io/easy_contact/index.html": "60ab07411983f6cbf16d300d00e7c6985d1b5dbe",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/envelope.png": "f0ad92b8cee83a4fc694faca1682a2dbfc9083d3",
+    "https://ajanieniolasolomon.github.io/easy_contact/main.97733f822040add3aa2a.js": "d31c730a962ecd1d8e28e4687fc6171a3f9c5182",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/gears.png": "a795a4ff6e97b87a5aeb620081f5b36f7d754dd0",
+    "https://ajanieniolasolomon.github.io/easy_contact/polyfills.a055efd08edeb127a289.js": "2548ae81006927ef075d70c63477c4ace08dd03a",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://ajanieniolasolomon.github.io/easy_contact/runtime.6afe30102d8fe7337431.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://ajanieniolasolomon.github.io/easy_contact/scripts.475758c1e30b98be34a7.js": "a56530307140c663ddbcc18048d19e3f4df4a01d",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://ajanieniolasolomon.github.io/easy_contact/styles.f856d80cf86778379eb0.css": "a7563b1138bd98393395d220c0302e376117506c",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/icons/notification.png": "c44539ce2481a1aa97eabe581df2840ce8bf2a9e",
+    "https://ajanieniolasolomon.github.io/easy_contact/assets/svg.svg": "06802e248df3744505d3970fd0a9e0e61ecc8f06"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+    }
+  ]
+}
